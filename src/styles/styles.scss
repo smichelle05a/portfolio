@@ -28,8 +28,9 @@ html, body, #__next {
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: inset 0 0 0 200px rgba(#f5f5f5, 0.15);
+    box-shadow: inset 0 0 0 200px rgba(#f5f5f5, 0.08);
     filter: blur(10px);
+    z-index: -1;
   }
 }
 
@@ -37,6 +38,16 @@ html, body, #__next {
   height: 100%;
 }
 
-.burger-btn {
-  z-index: 1;
+.link {
+  text-decoration: none;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background: rgba(#f5f5f5, 0.1);
+  }
+
+  &:active {
+    border-radius: 18px;
+    background: linear-gradient(rgba(#f5f5f5, 0.1), rgba(#f5f5f5, 0.2))
+  }
 }
