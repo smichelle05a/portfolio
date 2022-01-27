@@ -45,22 +45,22 @@ function Header() {
     <header className={`${h.header} header bg-frost color-light px-3`}>
       <div className={`overflow-hidden h-100 d-flex ai-center jc-between ${h.header__content}`}>
         <Link href="/">
-          <a className={`${h.link} fs-20 d-flex`} >
+          <a className={`link fs-20 d-flex`} >
             <GiTechnoHeart/>
             </a>
         </Link>
         <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 768 ? h.isMenu : ""} vh-100 w-100 d-flex fd-col jc-center ai-center fs-20`}>
           <Link href="/page-one" onClick={menuToggleHandler}>
-            <a className={`${h.link} color-light rounded-l py-2 px-4`}>PageOne</a>
+            <a className={`link color-light rounded-l py-2 px-4`}>PageOne</a>
             </Link>
           <Link href="/page-two" onClick={menuToggleHandler}>
-            <a className={`${h.link} color-light rounded-l py-2 px-4`}>PageTwo</a>
+            <a className={`link color-light rounded-l py-2 px-4`}>PageTwo</a>
             </Link>
           <Link href="/page-three" onClick={menuToggleHandler}>
-            <a className={`${h.link} color-light rounded-l py-2 px-4`}>PageThree</a>
+            <a className={`link color-light rounded-l py-2 px-4`}>PageThree</a>
             </Link>
           <Link href="/page-cta" onClick={menuToggleHandler}>
-            <a className={`${h.link} color-light rounded-l py-2 px-4`}>PageCTA</a>
+            <a className={`link color-light rounded-l py-2 px-4`}>PageCTA</a>
             </Link>
         </nav>
         
