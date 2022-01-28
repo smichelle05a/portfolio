@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { GiTechnoHeart } from 'react-icons/gi';
 import h from '../styles/header.module.scss';
 
 function Header() {
@@ -46,7 +46,7 @@ function Header() {
       <div className={`overflow-hidden h-100 d-flex ai-center jc-between ${h.header__content}`}>
         <Link href="/">
           <a className={`link fs-20 d-flex`} >
-            <GiTechnoHeart/>
+            <img src="./img/icons/techno-heart.png" alt="logo"  className={h.logo} />
             </a>
         </Link>
         <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 768 ? h.isMenu : ""} vh-100 w-100 d-flex fd-col jc-center ai-center fs-20`}>
