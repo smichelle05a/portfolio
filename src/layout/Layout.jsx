@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from '../blocks/Header'
+import Footer from '../blocks/Footer'
 
 function Layout({children}) {
   return (
@@ -15,7 +15,7 @@ function Layout({children}) {
 
       <Header/>
 
-      <main className='color-light grow-1 container'>
+      <main className='color-light grow-1 container p-none'>
         {children}
       </main>
       <Footer/>
