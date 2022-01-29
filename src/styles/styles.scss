@@ -1,4 +1,24 @@
-@use './app';
+@import './App';
+@import  './variables';
+
+@each $name, $color in $theme-colors {
+  .color-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background: $color;
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+  .burger-#{$name} {
+    background-color: $color;
+    &::before,
+    &::after{
+      background-color: $color;
+    }
+  }
+}
 
 html, body, #__next {
   height: 100%;
