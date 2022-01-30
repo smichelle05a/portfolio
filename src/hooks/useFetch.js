@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 const URL = 'https://api.github.com/users/smichelle05a/repos'
