@@ -6,7 +6,10 @@ function Portfolio() {
   const repos = useFetch()
   return (
     <Layout>
-      {repos.map((r) => <Project repo = {r} key= {r.id} />)}
+      <h2 className='fs-36 pb-1 pt-2 txt-center'>Portfolio</h2>
+      <div className={`row jc-center ac-center fw-wrap`}>
+        {repos.map((r) => <Project repo = {r} key= {r.id} />)}
+      </div>
     </Layout>
   );
 }
