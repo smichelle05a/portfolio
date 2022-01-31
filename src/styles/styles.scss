@@ -21,7 +21,7 @@
 }
 
 html, body, #__next {
-  height: 100%;
+  min-height: 100vh;
 }
 
 #__next {
@@ -61,6 +61,7 @@ html, body, #__next {
 .link {
   text-decoration: none;
   transition: 0.3s ease all;
+  cursor: pointer;
 
   &:hover {
     background: rgba(#f5f5f5, 0.1);
