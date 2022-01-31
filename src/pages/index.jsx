@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
+import BgAnimation from '../components/BgAnimation'
 import Layout from '../layout/Layout'
 import home from '../styles/home.module.scss'
 
@@ -18,6 +19,7 @@ function Home() {
           <img src='/assets/img/landing-photo.png' alt="Scarlet Albornoz" className={`${home.hero__img} p-none`} />
         </div>
       </div>
+      <BgAnimation/>
     </Layout>
   )
 }
