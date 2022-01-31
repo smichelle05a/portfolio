@@ -31,9 +31,9 @@ function Project({repo}) {
           ) : ""}
         </div>
       </div>
-      <div className={`d-flex fd-col ai-center p-2`}>
+      <div className={`d-flex fd-col ai-center grow-1 jc-between p-2`}>
 
-        {repo.description ? <p>{repo.description}</p> : ""}
+      <p className='w-100 txt-center'>{repo.description ? repo.description : 'No description found'}</p>
 
         <div className="d-flex ai-center jc-around w-100">
           <div className="col d-flex fd-col ai-center">
