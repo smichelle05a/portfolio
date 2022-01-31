@@ -1,0 +1,12 @@
+.footer {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease all;
+
+  &__social {
+    &__text {
+      display: none;
+    }
+  }
+}

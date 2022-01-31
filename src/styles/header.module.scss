@@ -1,0 +1,37 @@
+.header {
+  position: sticky;
+  height: 50px;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease all;
+  z-index: 1;
+
+  &__content {
+    max-width: 1920px;
+
+    &__nav {
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      position: fixed;
+      background: rgba(#333, 0.9);
+      backdrop-filter: blur(2px);
+      transform: translate(0);
+      transition: 0.5s ease transform;
+      
+    }
+    & .isMenu {
+      transform: translate(100%);
+    }
+
+    &__toggle {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.logo {
+  width: 20px;
+  object-fit: contain;
+}
