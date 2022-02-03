@@ -15,7 +15,7 @@ function Layout({children}) {
 
       <Header/>
 
-      <main className='color-light grow-1 container p-none'>
+      <main className='color-light grow-1 container p-none d-flex fd-col'>
         {children}
       </main>
       <Footer/>
