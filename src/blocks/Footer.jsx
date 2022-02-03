@@ -1,35 +1,30 @@
 import f from '../styles/footer.module.scss'
-import { ImWhatsapp } from 'react-icons/im'
-import { FaTelegramPlane, FaGithubAlt } from 'react-icons/fa'
-import { SiMaildotru } from 'react-icons/si'
-import { FiLinkedin } from 'react-icons/fi'
-import Link from 'next/link'
 import FooterSocialItem from '../components/FooterSocialItem'
 
 function Footer() {
   let socialNetworks = [
     {
-      icon: <ImWhatsapp/>,
+      icon: 'whatsapp',
       text: 'Whatsapp',
       link: 'https://wa.me/5491159451640'
     },
     {
-      icon: <FaTelegramPlane/>,
+      icon: 'telegram',
       text: 'Telegram',
       link: 'https://t.me/smichelle05a'
     },
     {
-      icon: <SiMaildotru/>,
+      icon: 'mail',
       text: 'Email',
       link: 'mailto:smichelle05a@gmail.com'
     },
     {
-      icon: <FaGithubAlt/>,
+      icon: 'github',
       text: 'Github',
       link: 'https://github.com/smichelle05a'
     },
     {
-      icon: <FiLinkedin/>,
+      icon: 'linkedin',
       text: 'LinkedIn',
       link: 'http://linkedin.com/in/scarlet-albornoz'
     },

@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { RiLinksFill } from 'react-icons/ri'
-import { FaGithubAlt } from 'react-icons/fa'
 import r from '../styles/portfolio.module.scss'
+import Icon from './Icon';
 
 function Project({repo}) {
   let dateFormat = {
@@ -18,14 +17,14 @@ function Project({repo}) {
         <div className={`${r.image__overlay} d-flex ai-center jc-around`}>
           <Link href={repo.html_url}>
             <a target="_blank" className={`link circle d-flex jc-center ai-center br-transparent fs-24 ${r.image__overlay__link}`}>
-              <FaGithubAlt/>
+              <Icon props='github'/>
             </a>
           </Link>
             
           {repo.homepage ? (
             <Link href={repo.homepage}>
               <a target="_blank" className={`link circle d-flex jc-center ai-center br-transparent fs-24 ${r.image__overlay__link}`}>
-                <RiLinksFill/>
+              <Icon props='link'/>
               </a>
             </Link>
           ) : ""}

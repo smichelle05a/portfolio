@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import h from '../styles/header.module.scss';
 import HeaderLink from '../components/HeaderLink';
+import Icon from '../components/Icon';
 
 function Header() {
   const router = useRouter()
@@ -51,8 +52,8 @@ function Header() {
         text: 'Portfolio'
       },
       {
-        link: '/page-two',
-        text: 'Page Two'
+        link: '/contact',
+        text: 'Contact'
       },
       {
         link: '/page-three',
@@ -68,7 +69,7 @@ function Header() {
       <div className={`overflow-hidden h-100 d-flex ai-center jc-between ${h.header__content}`}>
         <Link href="/">
           <a className={`link fs-20 d-flex`} >
-            <img src="./assets/icons/techno-heart.png" alt="logo"  className={h.logo} />
+            <Icon props='heart'/>
             </a>
         </Link>
         <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 768 ? h.isMenu : ""} vh-100 w-100 d-flex fd-col jc-center ai-center fs-20`}>
