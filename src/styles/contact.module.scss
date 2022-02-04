@@ -20,7 +20,8 @@
     }
 
     &__error {
-      height: 1.5rem;
+      // height: 1.5rem;
+      top: 10px;
     }
 
     label {
@@ -37,7 +38,7 @@
     &__input:not(:placeholder-shown) ~ label,
     &__input:focus ~ label {
       font-size: 1.2rem;
-      top:-20px;
+      top:-15px;
     }
 
     &__input:not(:placeholder-shown) &__input:invalid ~ label {

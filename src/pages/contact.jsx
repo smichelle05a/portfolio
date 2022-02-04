@@ -103,9 +103,10 @@ function Contact() {
               if(index < mailFields.length-1){
                 return (
                   <div className={`${contact.form__group} w-100 relative grow-1 mt-4`} key={index}>
-                    <input name={req.id} type={req.type} id={req.id} onChange={changeHandler} className={`${contact.form__group__input} p-2 pl-1 bg-transparent rounded-s w-100`} placeholder={req.label} autoComplete='off'/>
-                    <label htmlFor={req.id}>{req.label}</label>
-                    <span className={`color-highlight fs-12 ${contact.form__group__error}`}> {errors[req.id]} </span>
+                    
+                    <input name={req.id} type={req.type} id={req.id} onChange={changeHandler} className={`${contact.form__group__input} p-3 pl-1 bg-transparent rounded-s w-100`} placeholder={req.label} autoComplete='off'/>
+                    
+                    <label htmlFor={req.id}>{req.label} <br /> <span className={`color-highlight fs-12 relative ${contact.form__group__error}`}> {errors[req.id]} </span></label>
                   </div>
                 )
               }
@@ -113,9 +114,9 @@ function Contact() {
           </div>
           <div className={`row gap-2 ${contact.form}`}>
             <div className={`${contact.form__group} w-100 relative grow-1 mt-4`}>
+              
               <textarea id='message' name='message' onChange={changeHandler} cols='30' rows='10' className={`${contact.form__group__input} p-2 pl-1 bg-transparent rounded-s w-100 border`} placeholder='Write your mail here' autoComplete='off'></textarea>
-              <label htmlFor='message'>Write your mail here</label>
-              <span className='color-highlight fs-12'> {errors.message} </span>
+              <label htmlFor='message'>Write your mail here <br /> <span className={`color-highlight fs-12 relative ${contact.form__group__error}`}> {errors.message} </span></label>
             </div>
           </div>
           <button type='submit' className={`${contact.button} button color-primary-dark fs-20 py-2 mt-4`}>
