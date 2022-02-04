@@ -56,8 +56,8 @@ function Header() {
         text: 'Contact'
       },
       {
-        link: '/page-three',
-        text: 'Page Three'
+        link: '/experience',
+        text: 'Work Experience'
       },
       {
         link: '/page-cta',
