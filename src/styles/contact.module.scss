@@ -19,11 +19,6 @@
       }
     }
 
-    &__error {
-      // height: 1.5rem;
-      top: 10px;
-    }
-
     label {
       font-size: 1.7rem;
       position:absolute;
@@ -41,8 +36,9 @@
       top:-15px;
     }
 
-    &__input:not(:placeholder-shown) &__input:invalid ~ label {
-      color: var(--highlight);
+    &__input:not(:placeholder-shown) ~ label > &__error,
+    &__input:focus ~ label > &__error {
+      top: 10px;
     }
   }
 }

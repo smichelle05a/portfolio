@@ -66,19 +66,18 @@ function Contact() {
     setErrors(emptyErrors)
 
     if (isValid) {
-      console.log('Mail is Valid!')
-      // emailjs.sendForm(
-      //   "service_ko4dt38",
-      //   "template_pr60iyj",
-      //   e.target,
-      //   'user_K4D1oqAXcR4Z9KBSkCF3f'
-      // ).then(res=>console.log(res)).catch(err=>console.log(err));
+      emailjs.sendForm(
+        "service_ko4dt38",
+        "template_pr60iyj",
+        e.target,
+        'user_K4D1oqAXcR4Z9KBSkCF3f'
+      ).then(res=>console.log(res)).catch(err=>console.log(err));
 
       setMail(emptyMail)
+        e.target.reset()
     } else {
       await contactSchema
         .validate(mail, { abortEarly: false })
-        .then(() => console.log('Success'))
         .catch(err => {
           err.inner.forEach(e=>{
             const name = e.path
@@ -104,7 +103,7 @@ function Contact() {
                 return (
                   <div className={`${contact.form__group} w-100 relative grow-1 mt-4`} key={index}>
                     
-                    <input name={req.id} type={req.type} id={req.id} onChange={changeHandler} className={`${contact.form__group__input} p-3 pl-1 bg-transparent rounded-s w-100`} placeholder={req.label} autoComplete='off'/>
+                    <input name={req.id} type={req.type} id={req.id} onChange={changeHandler} className={`${contact.form__group__input} p-2 pt-3 bg-transparent rounded-s w-100`} placeholder={req.label} autoComplete='off'/>
                     
                     <label htmlFor={req.id}>{req.label} <br /> <span className={`color-highlight fs-12 relative ${contact.form__group__error}`}> {errors[req.id]} </span></label>
                   </div>
@@ -115,7 +114,7 @@ function Contact() {
           <div className={`row gap-2 ${contact.form}`}>
             <div className={`${contact.form__group} w-100 relative grow-1 mt-4`}>
               
-              <textarea id='message' name='message' onChange={changeHandler} cols='30' rows='10' className={`${contact.form__group__input} p-2 pl-1 bg-transparent rounded-s w-100 border`} placeholder='Write your mail here' autoComplete='off'></textarea>
+              <textarea id='message' name='message' onChange={changeHandler} cols='30' rows='10' className={`${contact.form__group__input} p-2 pt-3 bg-transparent rounded-s w-100 border`} placeholder='Write your mail here' autoComplete='off'></textarea>
               <label htmlFor='message'>Write your mail here <br /> <span className={`color-highlight fs-12 relative ${contact.form__group__error}`}> {errors.message} </span></label>
             </div>
           </div>
