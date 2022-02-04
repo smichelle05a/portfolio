@@ -1,3 +1,15 @@
 $theme-colors: (
   highlight: #e64868
-)
+);
+
+$base: 6px;
+
+$base-sizes: (
+  none: 0,
+  1: $base,
+  2: calc($base * 2),
+  3: calc($base * 3),
+  4: calc($base * 4),
+  5: calc($base * 5),
+  6: calc($base * 6)
+);

@@ -8,7 +8,7 @@
   .bg-#{$name} {
     background: $color;
   }
-  .border-#{$name} {
+  .br-#{$name} {
     border-color: $color !important;
   }
   .burger-#{$name} {
@@ -17,6 +17,16 @@
     &::after{
       background-color: $color;
     }
+  }
+
+  :root {
+    --#{$name}: #{$color};
+  }
+}
+
+@each $size, $value in $base-sizes {
+  .gap-#{$size} {
+    gap: $value;
   }
 }
 
@@ -30,7 +40,7 @@ html, body, #__next {
 }
 
 * {
-  line-height: normal;
+  line-height: 1;
   color: unset;
 }
 
