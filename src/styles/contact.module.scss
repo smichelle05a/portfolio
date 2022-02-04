@@ -1,0 +1,52 @@
+@import './variables';
+
+.form {
+  max-width: 500px;
+  flex-direction: column;
+  
+  &__group {
+    max-width: 400px;
+
+    &__input{
+    
+      &::placeholder {
+        color: var(--transparent);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    &__error {
+      height: 1.5rem;
+    }
+
+    label {
+      font-size: 1.7rem;
+      position:absolute;
+      pointer-events:none;
+      left:5px;
+      top:10px;
+      transition:0.2s ease all; 
+      -moz-transition:0.2s ease all; 
+      -webkit-transition:0.2s ease all;
+  }
+
+    &__input:not(:placeholder-shown) ~ label,
+    &__input:focus ~ label {
+      font-size: 1.2rem;
+      top:-20px;
+    }
+
+    &__input:not(:placeholder-shown) &__input:invalid ~ label {
+      color: var(--highlight);
+    }
+  }
+}
+
+.button {
+  width: 100%;
+  max-width: 400px;
+}
