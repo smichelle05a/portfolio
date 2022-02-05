@@ -1,0 +1,96 @@
+@import './variables.scss';
+
+.timeline {
+  transition: all 0.4s ease;
+
+  &__item {
+    $item: &;
+    flex-wrap: nowrap;
+
+    &__logo {
+      order: 3;
+      flex-basis: 40px;
+      background: linear-gradient(to right, var(--transparent) 46%, var(--light) 52%, var(--grey) 52%, var(--transparent) 56%);
+
+      img {
+        width: 40px;
+        height: 40px;
+        background: var(--light);
+      }
+    }
+    
+    &__description {
+      order: 5;
+      width: 80%;
+      background-color: rgba(#f5f5f5, 0.15);
+    }
+
+    &__arrow {
+      order: 4;
+      display: inline-block;
+      vertical-align: middle;
+      color: rgba(#f5f5f5, 0.15);
+      width: 0;
+      height: 0;
+      border: 15px solid transparent;
+      border-top: 15px solid;
+      border-right: 15px solid;
+      position: relative;
+      left: 15px;
+      transform: rotate(-135deg);
+
+      &Hidden {
+        color: transparent; 
+        order: 2;
+      }
+    }
+
+    @media (min-width: 426px ) {
+        &Flipped {
+        #{$item}__description {
+          order: 1;
+        }
+
+        #{$item}__arrow {
+          order: 2;
+          transform: rotate(45deg);
+          left: -15px;
+        }
+        
+        #{$item}__logo {
+          order: 3;
+        }
+
+        #{$item}__arrowHidden {
+          order: 4;
+        }
+
+        #{$item}__hidden {
+          order: 5;
+        }
+      }
+
+        #{$item}__hidden,
+        #{$item}__description {
+          width: 40%
+        }
+    }
+  }
+
+
+}
+
+/*
+  &::before,
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: var(--light);
+    position: absolute;
+  }
+  &::after {
+    bottom: 0;
+  }
+*/
