@@ -1,3 +1,24 @@
+$color-list: (
+  orange: rgb(255, 100, 42),
+  primary-lighter: rgb(215, 200, 254),
+  primary-light: rgb(95, 37, 253),
+  primary: rgb(71, 28, 190),
+  primary-dark: rgb(47, 18, 127),
+  dark: rgb(51, 51, 51),
+  white: rgb(255, 255, 255),
+  light: rgb(245, 245, 245),
+  light-grey: rgb(204, 204, 204),
+  grey: rgb(173, 173, 173),
+  dark-grey: rgb(102, 102, 102),
+  lighter-blue: rgb(227, 237, 251),
+  light-blue: rgb(199, 216, 250),
+  blue: rgb(52, 131, 250),
+  success: rgb(31, 100, 235),
+  benefit: rgb(66, 162, 21),
+  light-green: rgb(227, 241, 220),
+  transparent: transparent,
+);
+
 $theme-colors: (
   highlight: #e64868
 );
