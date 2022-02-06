@@ -32,7 +32,7 @@ function Footer() {
   return (
     <footer className={`${f.footer} bg-frost color-light fs-16 fw-400 d-flex jc-center ai-center`}>
       <div className='row'>
-        <div className={`col col-12 d-flex jc-around ${f.footer__social}`}>
+        <div className={`col col-12 fs-20 d-flex jc-center ${f.footer__social}`}>
           {socialNetworks.map((network, index) => <FooterSocialItem social={network} key={index}/>)}
         </div>
       </div>

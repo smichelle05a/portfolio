@@ -76,17 +76,11 @@ function Header() {
         <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 769 ? h.isMenu : ""} vh-100 w-100 d-flex jc-center ai-center fs-20`}>
           {pages.map((page, index)=><HeaderLink page={page} key={index} />)}
         </nav>
-        
-        {size.width < 769 ? (
-          <>
-            <input type="checkbox" name="burger" id="burger" onClick={menuToggleHandler} hidden/>
+
+        <input type="checkbox" name="burger" id="burger" onClick={menuToggleHandler} hidden/>
             <label htmlFor="burger" className="burger-btn">
               <span className="burger burger-light"></span>
             </label>
-          </>
-        ) : ""}
-
-        
 
       </div>
     </header>

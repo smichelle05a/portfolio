@@ -5,9 +5,9 @@ import Icon from './Icon';
 function FooterSocialItem({social}) {
   return (
     <Link href={social.link}>
-      <a className='link' target='_blank'>
-        <span className={`${f.footer__social__icon}`} ><Icon props={social.icon}/></span> 
-        <span className={`${f.footer__social__text}`} >{social.text}</span>
+      <a className={`link rounded-l py-2 px-4 d-flex ai-center`} target='_blank'>
+        <span className={``} ><Icon props={social.icon}/></span> 
+        <span className={`${f.footer__social__text} pl-2`} >{social.text}</span>
       </a>
     </Link>
   );
