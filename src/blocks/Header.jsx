@@ -30,7 +30,7 @@ function Header() {
     }, []);
 
     useEffect(() => {
-        if (size.width > 768 && menuOpen) {
+        if (size.width > 769 && menuOpen) {
             setMenuOpen(false);
         }
     }, [size.width, menuOpen]);
@@ -47,21 +47,22 @@ function Header() {
       {
         link: '/',
         text: 'Home'
-      },{
-        link: '/portfolio',
-        text: 'Portfolio'
       },
       {
-        link: '/contact',
-        text: 'Contact'
+        link: '/about',
+        text: 'About Me'
       },
       {
         link: '/experience',
         text: 'Work Experience'
       },
       {
-        link: '/page-cta',
-        text: 'Page CTA'
+        link: '/portfolio',
+        text: 'Portfolio'
+      },
+      {
+        link: '/contact',
+        text: 'Contact'
       },
     ]
   return (
@@ -72,15 +73,20 @@ function Header() {
             <Icon props='heart'/>
             </a>
         </Link>
-        <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 768 ? h.isMenu : ""} vh-100 w-100 d-flex fd-col jc-center ai-center fs-20`}>
+        <nav className={`${h.header__content__nav} ${ menuOpen && size.width < 769 ? h.isMenu : ""} vh-100 w-100 d-flex jc-center ai-center fs-20`}>
           {pages.map((page, index)=><HeaderLink page={page} key={index} />)}
         </nav>
         
+        {size.width < 769 ? (
+          <>
+            <input type="checkbox" name="burger" id="burger" onClick={menuToggleHandler} hidden/>
+            <label htmlFor="burger" className="burger-btn">
+              <span className="burger burger-light"></span>
+            </label>
+          </>
+        ) : ""}
 
-        <input type="checkbox" name="burger" id="burger" onClick={menuToggleHandler} hidden/>
-        <label htmlFor="burger" className="burger-btn">
-          <span className="burger burger-light"></span>
-        </label>
+        
 
       </div>
     </header>

@@ -18,7 +18,7 @@
       backdrop-filter: blur(2px);
       transform: translate(0);
       transition: 0.5s ease transform;
-      
+      flex-direction: column;
     }
     & .isMenu {
       transform: translate(100%);
@@ -34,4 +34,18 @@
 .logo {
   width: 20px;
   object-fit: contain;
+}
+
+@media (min-width: 769px) {
+  .header__content__nav {
+    top: 0;
+     right: 100%;
+     bottom: 0;
+     position: relative;
+     background: unset;
+     backdrop-filter: unset;
+     transform: translate(100%);
+    //  transition: 0.5s ease transform;
+     flex-direction: row;
+  }
 }
