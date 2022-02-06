@@ -126,7 +126,7 @@ function Experience() {
   return (
     <Layout>
       <h2 className='fs-36 py-3 txt-center'>Work Experience</h2>
-      <div className={`${xp.timeline} d-flex fw-wrap fs-14 p-3 grow-1`}>
+      <div className={`${xp.timeline} d-flex fw-wrap fs-14 p-3 grow-1 jc-center ai-center`}>
       {reverseExperience.map((exp, index) => {
             return (
               <div className={`${xp.timeline__item} w-100 d-flex jc-center ${index % 2 == 0 ? "" : `${xp.timeline__itemFlipped}`}`} key={index}>
