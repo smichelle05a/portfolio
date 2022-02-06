@@ -6,11 +6,7 @@ import h from '../styles/header.module.scss';
 import HeaderLink from '../components/HeaderLink';
 import Icon from '../components/Icon';
 
-function Header() {
-  const router = useRouter()
-  function isActive(route){
-    route == router.pathname ? "active" : ""
-  }
+function Header({scroll}) {
   const [menuOpen, setMenuOpen] = useState(false);
     const [size, setSize] = useState({
         width: undefined,
@@ -65,8 +61,9 @@ function Header() {
         text: 'Contact'
       },
     ]
+
   return (
-    <header className={`${h.header} header bg-frost color-light px-3`}>
+    <header className={`${h.header} header bg-frost color-light px-3 ${scroll ? 'bg-primary-darker' : ''}`}>
       <div className={`overflow-hidden h-100 d-flex ai-center jc-between ${h.header__content}`}>
         <Link href="/">
           <a className={`link fs-20 d-flex`} >

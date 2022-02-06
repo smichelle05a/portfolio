@@ -1,8 +1,12 @@
 import Head from 'next/head'
 import Header from '../blocks/Header'
 import Footer from '../blocks/Footer'
+import useScroll from '../hooks/useScroll';
 
 function Layout({children}) {
+
+  const scrollHandler = useScroll()
+
   return (
     <>
       <Head>
@@ -13,7 +17,7 @@ function Layout({children}) {
         <title>Scarlet Albornoz Portfolio</title>
       </Head>
 
-      <Header/>
+      <Header scroll={scrollHandler}/>
 
       <main className='color-light grow-1 container p-none d-flex fd-col jc-center'>
         {children}
