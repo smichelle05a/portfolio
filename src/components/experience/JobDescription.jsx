@@ -1,5 +1,5 @@
 function JobDescription({desc}) {
-  return <p>{desc}</p>;
+  return <p className='pb-1'>{desc}</p>;
 }
 
 export default JobDescription;
