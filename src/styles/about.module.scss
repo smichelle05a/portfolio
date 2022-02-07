@@ -1,0 +1,15 @@
+.container {
+  min-width: 400px;
+  max-width: 750px;
+
+  &Icons {
+    align-items: center;
+  }
+
+  @media (min-width: 769px) {
+
+    &Icons {
+      align-items: flex-start;
+    }
+  }
+}
