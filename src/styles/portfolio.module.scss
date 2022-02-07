@@ -1,3 +1,5 @@
+@import '../styles/variables.scss';
+
 .image {
   position: relative;
 
@@ -33,16 +35,24 @@
 
       &__link {
         margin: 30px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        width: 50px;
+
+        &:hover {
+          color: var(--light);
+        }
       }
+
     }
   }
 }
 
 .project {
-  max-width: 375px;
-  min-height: 400px;
+  max-width: 300px;
+  min-height: 350px;
 
   @media (min-width: 769px) {
-    min-height: 350px;
+    min-height: 320px;
   }
 }

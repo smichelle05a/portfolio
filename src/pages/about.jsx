@@ -2,6 +2,7 @@
 import Layout from '../layout/Layout'
 import Icon from '../components/Icon';
 import about from '../styles/about.module.scss'
+import Link from 'next/link';
 
 function About() {
 
@@ -68,6 +69,18 @@ function About() {
               <p> I&apos;m a Web Developer with knowledge in HTML, CSS, Bootstrap, JavaScript, Vue Js and React. </p>
               <p> I&apos;m a really curious person and love to learn about tech subjects, programming languages, frameworks and web development tools. </p>
               <p> Currently I&apos;m still studying to continue evolving in my career as a Frontend Developer. </p>
+            </div>
+            <div className="d-flex gap-3 py-5">
+              <Link href="/portfolio">
+                <a className={`link color-light rounded-l py-2 px-4 bg-primary-light fs-14`}>
+                  Portfolio
+                </a>
+              </Link>
+              <Link href="/contact">
+                <a className={`link color-light rounded-l py-2 px-4 bg-primary-light fs-14`}>
+                  Contact
+                </a>
+              </Link>
             </div>
         </div>
         <div className={`row p-3 jc-center ai-center grow-1 fw-wrap ${about.containerIcons}`}>

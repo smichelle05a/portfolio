@@ -14,16 +14,16 @@ function Project({repo}) {
     <div className={`col p-none card fd-col border color-light fs-16 ${r.project}`} >
       <div className={`${r.image}`}>
         <img src={`/assets/img/${repo.homepage ? `${repo.name}.png`: 'javascript-code.jpg'}`} alt={`${repo.name}`} className={`${r.image__photo}`} />
-        <div className={`${r.image__overlay} d-flex ai-center jc-around`}>
+        <div className={`${r.image__overlay} d-flex ai-center jc-around p-1 gap-3`}>
           <Link href={repo.html_url}>
-            <a target="_blank" className={`link circle d-flex jc-center ai-center br-transparent fs-24 ${r.image__overlay__link}`}>
+            <a target="_blank" className={`link d-flex jc-center ai-center br-transparent fs-24 bg-light color-primary-dark w-100 rounded-s p-1 ${r.image__overlay__link}`}>
               <Icon props='github'/>
             </a>
           </Link>
             
           {repo.homepage ? (
             <Link href={repo.homepage}>
-              <a target="_blank" className={`link circle d-flex jc-center ai-center br-transparent fs-24 ${r.image__overlay__link}`}>
+              <a target="_blank" className={`link d-flex jc-center ai-center br-transparent fs-24 bg-light color-primary-dark w-100 rounded-s p-1 ${r.image__overlay__link}`}>
               <Icon props='link'/>
               </a>
             </Link>
