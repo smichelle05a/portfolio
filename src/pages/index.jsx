@@ -16,12 +16,12 @@ function Home() {
           </h2>
           <div className="d-flex gap-3 py-5">
             <Link href="/about">
-              <a className={`link color-light rounded-l py-2 px-4 bg-primary-light fs-14`}>
+              <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>
                 About Me
               </a>
             </Link>
             <Link href="/contact">
-              <a className={`link color-light rounded-l py-2 px-4 bg-primary-light fs-14`}>
+              <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>
                 Contact
               </a>
             </Link>

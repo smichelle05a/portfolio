@@ -117,7 +117,7 @@ function Contact() {
               <label htmlFor='message'>Write your mail here <br /> <span className={`color-highlight fs-12 relative ${contact.form__group__error}`}> {errors.message} </span></label>
             </div>
           </div>
-          <button type='submit' className={`${contact.button} button color-primary-dark fs-20 py-2 mt-4`}>
+          <button type='submit' className={`${contact.button} link color-light bg-transparent rounded-l py-2 px-4 border fs-14`}>
             Send Email
           </button>
         </form>
