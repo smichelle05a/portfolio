@@ -45,8 +45,12 @@
 }
 
 .project {
-  max-width: 300px;
+  max-width: 400px;
   min-height: 350px;
+
+  @media (min-width: 426px) {
+    max-width: 300px;
+  }
 
   @media (min-width: 769px) {
     min-height: 320px;
