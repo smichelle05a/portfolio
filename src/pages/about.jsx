@@ -53,17 +53,22 @@ function About() {
       icon: 'teamwork',
       description: 'Teamwork'
     },
+    {
+      icon: 'goal',
+      description: 'Goal Oriented'
+    }
   ]
   return (
     <Layout>
-      <h2 className='fs-36 py-3 txt-center'>About me</h2>
+      
       <div className='container d-flex fw-wrap jc-center'>
-        <div className={`p-3 row jc-center ai-center ${about.container}`}>
-          <div className={`col col-12 fs-16 gap-2 d-flex fd-col`}>
-            <p> I&apos;m a Web Developer with knowledge in HTML, CSS, Bootstrap, JavaScript, Vue Js and React. </p>
-            <p> I&apos;m a really curious person and love to learn about tech subjects, programming languages, frameworks and web development tools. </p>
-            <p> Currently I&apos;m still studying to continue evolving in my career as a Frontend Developer. </p>
-          </div>
+        <div className={`p-3 d-flex fd-col jc-center ai-center jc-center fs-16 ${about.container}`}>
+            <h2 className='fs-36 txt-center fw-800 border-bottom pb-3 w-100'>About me</h2>
+            <div className='d-flex fd-col gap-2 pt-3'>
+              <p> I&apos;m a Web Developer with knowledge in HTML, CSS, Bootstrap, JavaScript, Vue Js and React. </p>
+              <p> I&apos;m a really curious person and love to learn about tech subjects, programming languages, frameworks and web development tools. </p>
+              <p> Currently I&apos;m still studying to continue evolving in my career as a Frontend Developer. </p>
+            </div>
         </div>
         <div className={`row p-3 jc-center ai-center grow-1 fw-wrap ${about.containerIcons}`}>
               <div className={`${about.container} ${about.containerIcons__section}`}>

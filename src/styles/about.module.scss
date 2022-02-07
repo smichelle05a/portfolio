@@ -7,9 +7,12 @@
   }
 
   @media (min-width: 769px) {
-
+    & {
+      width: 50%;
+    }
     &Icons {
       align-items: flex-start;
+      max-width: 472px;
     }
   }
 }
