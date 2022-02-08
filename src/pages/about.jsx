@@ -61,20 +61,22 @@ function About() {
   return (
     <Layout>
       <div className='container d-flex fw-wrap jc-center'>
-        <div className={`p-3 d-flex fd-col jc-center ai-center jc-center fs-16 ${about.container}`}>
-          <h2 className='fs-36 txt-center fw-800 border-bottom pb-3 w-100'>About me</h2>
-          <div className='d-flex fd-col gap-2 pt-3'>
-            <p> I&apos;m a Web Developer with knowledge in HTML, CSS, Bootstrap, JavaScript, Vue Js and React. </p>
-            <p> I&apos;m a really curious person and love to learn about tech subjects, programming languages, frameworks and web development tools. </p>
-            <p> Currently I&apos;m still studying to continue evolving in my career as a Frontend Developer. </p>
-          </div>
-          <div className='d-flex gap-3 pt-5'>
-            <Link href='/portfolio'>
-              <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>Portfolio</a>
-            </Link>
-            <Link href='/contact'>
-              <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>Contact</a>
-            </Link>
+        <div className={`row jc-center ai-center grow-1 fw-wrap ${about.container}`}>
+          <div className={`${about.container__section} p-3 fs-16 d-flex fd-col ai-center`}> 
+            <h2 className='fs-36 txt-center fw-800 border-bottom pb-3 w-100'>About me</h2>
+            <div className='d-flex fd-col gap-2 pt-3'>
+              <p> I&apos;m a Web Developer with knowledge in HTML, CSS, Bootstrap, JavaScript, Vue Js and React. </p>
+              <p> I&apos;m a really curious person and love to learn about tech subjects, programming languages, frameworks and web development tools. </p>
+              <p> Currently I&apos;m still studying to continue evolving in my career as a Frontend Developer. </p>
+            </div>
+            <div className='d-flex gap-3 pt-5'>
+              <Link href='/portfolio'>
+                <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>Portfolio</a>
+              </Link>
+              <Link href='/contact'>
+                <a className={`link color-light rounded-l py-2 px-4 border fs-14`}>Contact</a>
+              </Link>
+            </div>
           </div>
         </div>
         <div className={`row jc-center ai-center grow-1 fw-wrap ${about.container}`}>
