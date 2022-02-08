@@ -2,8 +2,8 @@ import Layout from '../layout/Layout'
 import contact from '../styles/contact.module.scss'
 import emailjs from 'emailjs-com'
 import { useState } from 'react'
-import * as yup from 'yup'
 import { contactSchema } from '../validations/contact-validation'
+import Message from '../components/Message'
 
 function Contact() {
   const mailFields = [
@@ -59,6 +59,12 @@ function Contact() {
     }))
   }
 
+  const [msg, setMsg] = useState('')
+
+  function removeMsg() {
+    setTimeout(()=>{setMsg('')}, 5000)
+  }
+
   async function sendEmail(e) {
     e.preventDefault()
 
@@ -71,7 +77,16 @@ function Contact() {
         "template_pr60iyj",
         e.target,
         'user_K4D1oqAXcR4Z9KBSkCF3f'
-      ).then(res=>console.log(res)).catch(err=>console.log(err));
+      )
+      .then(res=>{
+        setMsg(<Message message={`Message sent!`}/>)
+        removeMsg()
+      }
+      )
+      .catch(err=>{
+        setMsg(<Message message={`Ocurrió un error al enviar el mensaje, por favor, comunícate conmigo por otra vía y hazme saber el código de error: ${err}`} isError/>)
+        removeMsg()
+      });
 
       setMail(emptyMail)
         e.target.reset()
@@ -95,7 +110,7 @@ function Contact() {
     <Layout>
       <h2 className='fs-36 pb-1 pt-2 txt-center'>Contact Me</h2>
       <div className='d-flex fd-col w-100 ai-center'>
-        <form action='' autoComplete='off' className={` container d-flex fd-col jc-center ai-center`} onSubmit={sendEmail}>
+        <form action='' autoComplete='off' className={`container d-flex fd-col jc-center ai-center`} onSubmit={sendEmail}>
           <div className={`row gap-2 ${contact.form}`}>
             {mailFields.map((req, index) => {
               if(index < mailFields.length-1){
@@ -122,6 +137,7 @@ function Contact() {
           </button>
         </form>
       </div>
+      {msg} 
     </Layout>
   )
 }
