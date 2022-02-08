@@ -4,9 +4,12 @@ export const useScroll = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', ()=>{
+    const scrollListener = ()=>{
       setScroll(window.scrollY > 5)
-    })
+    }
+    window.addEventListener('scroll', scrollListener)
+
+    return ()=> {window.removeEventListener('scroll', scrollListener)}
   }, []);
 
   return scroll;
